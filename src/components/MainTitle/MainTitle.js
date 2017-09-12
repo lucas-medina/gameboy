@@ -8,10 +8,9 @@ class MainTitle extends Component {
     }
 
     componentWillMount(){
-        console.log('mounted');
-        this.setState({ introEnded: false });
-
-        
+        setTimeout(() => {
+            this.props.endIntro();
+        }, 3000);
     }
 
     render(){
