@@ -1,0 +1,93 @@
+.gameboy {
+    width: 268px;
+    height: 344px;
+    border: 7px solid #333;
+    border-radius: 28px 28px 80px 28px / 28px 28px 72px 28px;
+    overflow: hidden;
+}
+.gameboy__layer {
+    padding-top: 22px;
+    background-color: rgba(0,0,0,.1);
+    position: relative;
+}
+.gameboy__layer--power {
+    border-radius: 23px 23px 0 0 / 19px 19px 0 0;
+    border: 2px solid #333;
+    border-bottom: none;
+    padding: 26px 0 0;
+    width: calc(100% + 4px);
+    margin-left: -2px;
+}
+.gameboy__cartdrige {
+    width: 123px;
+    border-radius: 4px;
+    height: 20px;
+    border: 5px solid #333;
+    background-color: rgba(0,0,0,.25);
+    background-color: #808080;
+    display: block;
+    position: absolute;
+    top: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.gameboy__power {
+    font-size: 0;
+    display: inline-block;
+    border-radius: 2px;
+    border: 4px solid #333;
+    position: absolute;
+    top: -2px;
+    left: 34px;
+    width: 28px;
+    height: 16px;
+}
+.gameboy__power:before {
+    content: "";
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    border-radius: 2px;
+    border: 4px solid #333;
+    position: absolute;
+    top: -4px;
+    left: -4px;
+    box-sizing: border-box;
+    background-color: rgba(0,0,0,.1);
+}
+.gameboy__ui {
+    border-radius: 23px 23px 0 0;
+    padding: 23px 18px 32px;
+    overflow: hidden;
+}
+.gameboy__ui:after {
+    content: "";
+    display: block;
+    background-color: rgba(0,0,0,.1);
+    z-index: 4;
+    width: 90px;
+    height: 120px;
+    position: absolute;
+    transform-origin: 0 50%;
+    bottom: -29px;
+    right: -49px;
+    transform: rotateZ(44deg);
+}
+.gameboy__sound {
+    width: 28px;
+    position: absolute;
+    bottom: 12px;
+    right: 25px;
+    transform: rotateZ(42deg);
+    transform-origin: 50% 50%;
+    display: block;
+    z-index: 5;
+}
+.gameboy__sound span {
+    display: block;
+    width: 100%;
+    height: 4px;
+    margin-bottom: 4px;
+    border-radius: 4px;
+    background-color: #333;
+}

@@ -7,21 +7,25 @@ import Gameboy from './components/Gameboy/Gameboy';
 // CSS
 import './App.css';
 
-// Assets
-import logo from './logo.svg';
-
 class App extends Component {
 
 	constructor(props){
 		super(props);
 
 		this.state = { introEnded: false }
+		this.colors = {
+			green: "#52c963",
+			red: "#ff5259",
+			blue: "#527aff"
+		}
 
 		this.introWillEnd = this.introWillEnd.bind(this);
 	}
 
 	introWillEnd(){
-		this.setState({ introEnded: true });
+		setTimeout(() => {
+            this.setState({ introEnded: true });
+        }, 3500);
 	}
 
     render() {
@@ -31,7 +35,7 @@ class App extends Component {
             <div className="page-wrapper">
 				{ introEnded ? 
 					(
-						<Gameboy color="#2ecc71" />
+						<Gameboy color={this.colors.red} />
 					) : (
 						<MainTitle endIntro={this.introWillEnd} />
 					)

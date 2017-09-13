@@ -7,10 +7,8 @@ class MainTitle extends Component {
         super(props);
     }
 
-    componentWillMount(){
-        setTimeout(() => {
-            this.props.endIntro();
-        }, 3000);
+    componentDidMount(){
+        this.props.endIntro();
     }
 
     render(){

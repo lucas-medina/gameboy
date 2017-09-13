@@ -1,0 +1,93 @@
+.pad {
+    position: relative;
+}
+.pad__row--inputs {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 10px;
+}
+.pad__row--startselect {
+    display: flex;
+    justify-content: center;
+}
+
+.pad__directionals {
+    background-color: rgba(0,0,0,.1);
+    width: 62px;
+    padding: 5px;
+    border-radius: 50%;
+}
+.pad__directionalaxis {
+    width: 18px;
+    height: 52px;
+    margin: 0 auto;
+    background-color: #333;
+    border-radius: 2px;
+    position: relative;
+}
+.pad__directionalaxis:before {
+    content: "";
+    width: 18px;
+    height: 52px;
+    background-color: #333;
+    border-radius: 2px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: rotateZ(90deg);
+    transform-origin: 50% 50%;
+}
+.pad__directionalaxis:after {
+    content: "";
+    display: block;
+    padding: 8px;
+    background-color: #4d4d4d;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.pad__buttons {
+    background-color: rgba(0,0,0,.1);
+    padding: 5px;
+    border-radius: 35px;
+    font-size: 0;
+    transform-origin: 50% 50%;
+    transform: rotateZ(-40deg);
+    margin-right: 4px;
+}
+.pad__button {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #333;
+    display: inline-block;
+    position: relative;
+}
+.pad__button:first-child {
+    margin-right: 4px;
+}
+.pad__button:before {
+    content: "";
+    position: absolute;
+    padding: 5px;
+    background-color: rgba(255,255,255,.1);
+    border-radius: 50%;
+    top: calc(50% - 5px);
+    right: 7px;
+}
+.pad__startselect {
+    margin-right: 9px;
+}
+.pad__startselect:before, .pad__startselect:after {
+    content: "";
+    display: inline-block;
+    width: 28px;
+    height: 14px;
+    border-radius: 7px;
+    background-color: #333;
+    transform-origin: 50% 50%;
+    transform: rotateZ(-45deg);
+}
