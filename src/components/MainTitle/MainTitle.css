@@ -14,8 +14,8 @@
     text-transform: uppercase;
     line-height: .7;
     animation: 
-        swipeUpStart .5s ease .25s 1 backwards,
-        swipeUpEnd .5s ease 1.75s 1 forwards;
+        swipeUpStart .35s ease .25s 1 backwards,
+        swipeUpEnd .35s ease 1.6s 1 forwards;
 }
 .maintitle__subtitle {
     font-size: 48px;
@@ -25,8 +25,8 @@
     width: 100%;
     opacity: 1;
     animation: 
-        swipeUpStart .5s ease 1.75s 1 backwards,
-        swipeUpEnd .5s ease 2.75s 1 forwards
+        swipeUpStart .4s ease 1.6s 1 backwards,
+        swipeUpEnd .4s ease 2.6s 1 forwards
 }
 
 @keyframes swipeUpStart {

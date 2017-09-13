@@ -1,9 +1,18 @@
+@keyframes swipeUpStart {
+    from {
+        transform: translateY(10%);
+        opacity: 0;
+        visibility: hidden;
+    }
+}
 .gameboy {
     width: 268px;
     height: 344px;
     border: 7px solid #333;
     border-radius: 28px 28px 80px 28px / 28px 28px 72px 28px;
     overflow: hidden;
+    margin-bottom: 12px;
+    animation: swipeUpStart 1s ease 0s 1 backwards;
 }
 .gameboy__layer {
     padding-top: 22px;

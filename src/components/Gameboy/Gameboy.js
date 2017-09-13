@@ -6,9 +6,22 @@ import GameboyPad from '../GameboyPad/GameboyPad';
 
 class Gameboy extends Component {
 
+    constructor(props){
+        super(props);
+    }
+
+    shuffleGameboy(){
+        if (this.props.shuffle){
+            return 'shuffling';
+        }
+    }
+
     render(){
+
         return (
-            <div className="gameboy" style={{backgroundColor: this.props.color}}>
+            <div 
+                className={`gameboy ${this.shuffleGameboy()}`} 
+                style={{backgroundColor: this.props.color, animationDelay: this.props.delay}}>
                 <div className="gameboy__layer gameboy__layer--cartdrige">
                     <span className="gameboy__cartdrige"></span>
                     <div className="gameboy__layer gameboy__layer--power">
