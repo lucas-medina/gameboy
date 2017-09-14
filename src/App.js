@@ -28,6 +28,7 @@ class App extends Component {
 			grey: "#595959",
 			pink: "#F06292"
 		}
+		this.moods = ['happy', 'bored', 'amazed', 'meh'];
 
 		this.introWillEnd = this.introWillEnd.bind(this);
 		this.shuffleColors = this.shuffleColors.bind(this);
@@ -39,32 +40,36 @@ class App extends Component {
         }, 3000);
 	}
 
-	getColor(){
-		let colorAmount = Object.keys(this.colors).length;
-		let color = Object.keys(this.colors)[Math.floor(Math.random() * colorAmount)];
+	getEmotion(){
+		let emotion = this.moods[Math.floor(Math.random() * this.moods.length)];
+		console.log(emotion);
+		return emotion;
+	}
 
-		return this.colors[color];
+	getGameboys(){
+		let gameboys = [];
+		let gameboyNum = this.state.currentGameboys;
+		let colorArray = Object.keys(this.colors);
+
+		for (let i = 0; i < gameboyNum; i++){
+			let index = Math.floor(Math.random() * colorArray.length);
+			let color = this.colors[colorArray[index]];
+						
+			gameboys.push(<Gameboy key={i} delay={(i * 0.3) + "s"} shuffle={this.state.shuffle} color={color} emotion={this.getEmotion()} />);
+
+			colorArray.splice(index, 1);
+		}
+		console.log(gameboys);
+		return gameboys;
+
 	}
 
 	shuffleColors(){
-		if (!this.state.shuffle){
-			this.setState({ shuffle: true });
-			this.setState(this.state);
-
-			setTimeout(() => {
-				this.setState({ shuffle: false });
-			}, 2000);
-		}
+		this.setState(this.state);
 	}
 
     render() {
 		let introEnded = this.state.introEnded;
-		let gameboys = [];
-
-		for (let i = 0; i < this.state.currentGameboys; i++){
-			console.log('looping');
-			gameboys.push(<Gameboy key={i} delay={(i * 0.3) + "s"} shuffle={this.state.shuffle} color={this.getColor()} />);
-		}
 		
 		return (
             <div className="page-wrapper">
@@ -72,7 +77,7 @@ class App extends Component {
 					(
 						<div>
 							<div className="page-gameboy-wrapper">
-								{gameboys}
+								{this.getGameboys()}
 							</div>
 							<Controls shuffleColors={this.shuffleColors} />							
 						</div>

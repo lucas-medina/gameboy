@@ -27,7 +27,7 @@ class Gameboy extends Component {
                     <div className="gameboy__layer gameboy__layer--power">
                         <span style={{backgroundColor: this.props.color}} className="gameboy__power"></span>
                         <div style={{backgroundColor: this.props.color}} className="gameboy__ui">
-                            <GameboyHud />
+                            <GameboyHud emotion={this.props.emotion} />
                             <GameboyPad />
                             <div className="gameboy__sound">
                                 <span></span>

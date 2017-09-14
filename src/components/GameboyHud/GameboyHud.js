@@ -5,13 +5,6 @@ import './GameboyHud.css';
 class GameboyHud extends Component {
     constructor(props){
         super(props);
-
-        this.state = {
-            mood: 'happy'
-        };
-        this.availableMoods = ['happy', 'bored', 'amazed'];
-
-        this.getEmote = this.getEmote.bind(this);
     }
 
     getEmote(){
@@ -21,7 +14,7 @@ class GameboyHud extends Component {
     }
 
     componentWillMount(){
-        this.getEmote();
+        // this.getEmote();
     }
     
     render(){

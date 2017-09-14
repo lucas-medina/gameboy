@@ -13,6 +13,14 @@
     overflow: hidden;
     margin-bottom: 12px;
     animation: swipeUpStart 1s ease 0s 1 backwards;
+    transition: 0.35s cubic-bezier(0.78, 0.08, 0.35, 1.48) transform;
+    cursor: pointer;
+}
+.gameboy:hover {
+    transform: rotateX(18deg);
+}
+.gameboy:active {
+    transform: rotateX(22deg);
 }
 .gameboy__layer {
     padding-top: 22px;

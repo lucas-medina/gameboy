@@ -6,4 +6,5 @@
 .page-gameboy-wrapper {
   display: flex;
   justify-content: space-around;
+  perspective: 1000px;
 }
