@@ -24,5 +24,6 @@
     background-color: #a8e570;
     border-radius: 4px;
     display: inline-block;
-    position: relatve;
+    position: relative;
+    vertical-align: top;
 }

@@ -1,0 +1,145 @@
+.emoji * {
+    transition: .2s ease;
+}
+.emoji {
+    display: flex;
+    justify-content: center;
+    flex-flow: column;
+    height: 100%;
+}
+.emoji__wrapper {
+    padding: 0 16px;
+}
+.emoji__row--upper {
+    display: flex;
+    justify-content: space-between;
+}
+.emoji__row--lower {
+    display: flex;
+    justify-content: center;
+}
+.meh .emoji__row--upper {
+    margin-bottom: 5px;
+}
+.meh .emoji__row--lower {
+    padding: 0 16px;
+}
+.meh .emoji__eye {
+    padding: 4px;
+    display: inline-block;
+    border-radius: 50%;
+    background-color: #63993b;
+}
+.meh .emoji__mouth {
+    width: 100%;
+    background-color: #63993b;
+    border-radius: 5px;
+    height: 5px;
+    display: block;
+}
+.bored .emoji__row--upper {
+    margin-bottom: 6px;
+}
+.bored .emoji__eye {
+    width: 33px;
+    display: inline-block;
+    height: 5px;
+    background-color: #63993b;
+    border-radius: 5px;
+    position: relative;
+}
+.bored .emoji__eye:before {
+    position: absolute;
+    content: "";
+    display: block;
+    width: 9px;
+    height: 12px;
+    background-color: #63993b;
+    border-radius: 50%;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.bored .emoji__mouth:before, .bored .emoji__mouth:after {
+    content: "";
+    height: 4px;
+    border-radius: 4px;
+    width: 12px;
+    display: inline-block;
+    background-color: #63993b;
+    margin: 0 -4px;
+}
+.bored .emoji__mouth:before {
+    transform-origin: 0 50%;
+    transform: rotateZ(-45deg);
+}
+.bored .emoji__mouth:after {
+    transform-origin: 100% 50%;
+    transform: rotateZ(45deg);
+}
+
+.happy .emoji__eye {
+    padding: 8px;
+    display: inline-block;
+    border-radius: 50%;
+    background-color: #63993b;
+}
+.happy .emoji__row--lower {
+    margin-top: -6px;
+}
+.happy .emoji__mouth {
+    width: 36px;
+    height: 22px;
+    background-color: #63993b;
+    border-radius: 2px 2px 15px 15px;
+    display: block;
+}
+.amazed .emoji__eye:before {
+    padding: 5px;
+    border: 4px solid #63993b;
+    border-radius: 50%;
+    display: block;
+    content: "";
+}
+.amazed .emoji__eyeshadow {
+    display: inline-block;
+    height: 10px;
+    width: 3px;
+    background-color: #63993b;
+    border-radius: 4px;
+    position: relative;
+    margin-top: -3px;
+    top: -2px;
+    left: -1px;
+}
+.amazed .emoji__eyeshadow:before, .amazed .emoji__eyeshadow:after {
+    display: inline-block;
+    height: 10px;
+    width: 3px;
+    background-color: #63993b;
+    border-radius: 4px;
+    content: "";
+    position: absolute;
+    top: 0;
+}
+.amazed .emoji__eyeshadow:before {
+    left: -5px;
+    transform: translateY(5px);
+}
+.amazed .emoji__eyeshadow:after {
+    right: -5px;
+    transform: translateY(-5px);
+}
+.amazed .emoji__eyeshadow {
+    transform: rotateZ(45deg);
+    transform-origin: 50% 50%;
+}
+.amazed .emoji__row--lower {
+    margin-top: -24px;
+}
+.amazed .emoji__mouth {
+    width: 30px;
+    height: 22px;
+    border: 4px solid #63993b;
+    border-radius: 15px 15px 6px 6px;
+}

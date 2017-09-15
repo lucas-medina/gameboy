@@ -13,11 +13,18 @@
     overflow: hidden;
     margin-bottom: 12px;
     animation: swipeUpStart 1s ease 0s 1 backwards;
-    transition: 0.35s cubic-bezier(0.78, 0.08, 0.35, 1.48) transform;
+    transition: 0.35s cubic-bezier(0.78, 0.08, 0.35, 1.48) transform, .25s linear background-color;
     cursor: pointer;
 }
 .gameboy:hover {
     transform: rotateX(18deg);
+}
+.gameboy:hover .emoji__wrapper {
+    transform: translateY(-12px);
+}
+.gameboy:hover .meh .emoji__wrapper,
+.gameboy:hover .amazed .emoji__wrapper {
+    transform: translateY(12px) scale(.9);
 }
 .gameboy:active {
     transform: rotateX(22deg);
@@ -74,7 +81,7 @@
 }
 .gameboy__ui {
     border-radius: 23px 23px 0 0;
-    padding: 23px 18px 32px;
+    padding: 23px 18px 36px;
     overflow: hidden;
 }
 .gameboy__ui:after {

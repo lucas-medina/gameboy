@@ -41,8 +41,12 @@ class GameboyHudEmojis extends Component {
                 return (
                     <div className="emoji__wrapper">
                         <div className="emoji__row emoji__row--upper">
-                            <span className="emoji__eye"></span>
-                            <span className="emoji__eye"></span>
+                            <span className="emoji__eye">
+                                <i className="emoji__eyeshadow"></i>
+                            </span>
+                            <span className="emoji__eye">
+                                <i className="emoji__eyeshadow"></i>
+                            </span>
                         </div>
                         <div className="emoji__row emoji__row--lower">
                             <span className="emoji__mouth"></span>   
@@ -68,9 +72,10 @@ class GameboyHudEmojis extends Component {
     }
 
     render(){
+        let hudEmotion = this.props.emotion;
         return (
-            <div className="emoji">
-
+            <div className={`emoji ${hudEmotion}`}>
+                {this.whichEmotion()}
             </div>
         );
     }

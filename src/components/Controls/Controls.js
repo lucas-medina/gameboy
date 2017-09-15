@@ -9,7 +9,7 @@ class Controls extends Component {
     render(){
         return (
             <div className="controls">
-                <button onClick={this.props.shuffleColors} type="button" className="controls__button">Shuffle Color</button>
+                <button onClick={this.props.shuffleColors} type="button" className="controls__button">Shuffle</button>
             </div>
         );
     }

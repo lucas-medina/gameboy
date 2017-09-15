@@ -28,7 +28,6 @@ class App extends Component {
 			grey: "#595959",
 			pink: "#F06292"
 		}
-		this.moods = ['happy', 'bored', 'amazed', 'meh'];
 
 		this.introWillEnd = this.introWillEnd.bind(this);
 		this.shuffleColors = this.shuffleColors.bind(this);
@@ -40,12 +39,6 @@ class App extends Component {
         }, 3000);
 	}
 
-	getEmotion(){
-		let emotion = this.moods[Math.floor(Math.random() * this.moods.length)];
-		console.log(emotion);
-		return emotion;
-	}
-
 	getGameboys(){
 		let gameboys = [];
 		let gameboyNum = this.state.currentGameboys;
@@ -55,11 +48,10 @@ class App extends Component {
 			let index = Math.floor(Math.random() * colorArray.length);
 			let color = this.colors[colorArray[index]];
 						
-			gameboys.push(<Gameboy key={i} delay={(i * 0.3) + "s"} shuffle={this.state.shuffle} color={color} emotion={this.getEmotion()} />);
+			gameboys.push(<Gameboy key={i} delay={(i * 0.3) + "s"} shuffle={this.state.shuffle} color={color} />);
 
 			colorArray.splice(index, 1);
 		}
-		console.log(gameboys);
 		return gameboys;
 
 	}
