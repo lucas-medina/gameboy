@@ -5,6 +5,7 @@
 }
 .page-gameboy-wrapper {
   display: flex;
+  flex-flow: row wrap;
   justify-content: space-around;
   perspective: 1000px;
   padding-top: 32px;

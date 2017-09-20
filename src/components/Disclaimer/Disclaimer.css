@@ -1,0 +1,19 @@
+.disclaimer {
+
+}
+.disclaimer__text {
+    font-family: Tahoma, Arial, sans-serif;
+    font-size: 14px;
+    color: #fff;
+    margin: .5em 0;
+}
+.disclaimer__text a {
+    font-family: 'Press Start 2P', cursive;
+    vertical-align: middle;
+    display: inline-block;
+    color: #fff;
+    margin-left: 4px;
+}
+.disclaimer__text a:hover {
+    color: yellow;
+}

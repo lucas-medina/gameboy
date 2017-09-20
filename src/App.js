@@ -4,6 +4,7 @@ import React, { Component } from 'react';
 import MainTitle from './components/MainTitle/MainTitle';
 import Gameboy from './components/Gameboy/Gameboy';
 import Controls from './components/Controls/Controls';
+import Disclaimer from './components/Disclaimer/Disclaimer';
 
 // CSS
 import './App.css';
@@ -68,6 +69,7 @@ class App extends Component {
 				{ introEnded ? 
 					(
 						<div>
+							<Disclaimer />
 							<div className="page-gameboy-wrapper">
 								{this.getGameboys()}
 							</div>
